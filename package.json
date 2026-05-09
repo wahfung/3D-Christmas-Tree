@@ -1,0 +1,28 @@
+{
+  "name": "christmas-tree-3d-gesture",
+  "version": "1.0.0",
+  "description": "Interactive 3D Christmas Tree with Hand Gesture Recognition",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "three.js",
+    "webgl",
+    "christmas",
+    "3d",
+    "particles",
+    "gesture-recognition",
+    "mediapipe"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.4.0"
+  },
+  "dependencies": {
+    "three": "^0.157.0"
+  }
+}

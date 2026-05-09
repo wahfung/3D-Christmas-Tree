@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>3D Christmas Tree - Gesture Interactive</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Three.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.min.js"></script>
+    <!-- MediaPipe CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1675469240/hands.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3.1675466862/camera_utils.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 3D Canvas Container -->
+        <div id="canvas-container"></div>
+
+        <!-- Camera Feed (hidden, used for gesture detection) -->
+        <video id="video" autoplay playsinline></video>
+
+        <!-- Gesture Indicator -->
+        <div id="gesture-indicator">
+            <span id="gesture-icon">🤚</span>
+            <span id="gesture-text">等待手势...</span>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div id="loading-overlay">
+            <div class="loading-spinner"></div>
+            <p>正在加载资源...</p>
+        </div>
+
+        <!-- Photo Display Modal -->
+        <div id="photo-modal" class="modal hidden">
+            <div id="photo-container">
+                <img id="photo-display" src="" alt="Photo">
+            </div>
+        </div>
+
+        <!-- Love Letter Modal -->
+        <div id="letter-modal" class="modal hidden">
+            <div id="letter-container">
+                <div id="letter-content"></div>
+            </div>
+        </div>
+
+        <!-- Hint Panel -->
+        <div id="hints-panel">
+            <div class="hint-item">
+                <span class="hint-gesture">👊</span>
+                <span class="hint-text">圣诞树形态</span>
+            </div>
+            <div class="hint-item">
+                <span class="hint-gesture">🖐</span>
+                <span class="hint-text">星云形态 + 旋转控制</span>
+            </div>
+            <div class="hint-item">
+                <span class="hint-gesture">👉</span>
+                <span class="hint-text">放大照片</span>
+            </div>
+            <div class="hint-item">
+                <span class="hint-gesture">👌</span>
+                <span class="hint-text">显示告白信</span>
+            </div>
+            <div class="hint-item">
+                <span class="hint-gesture">✌️</span>
+                <span class="hint-text">切换颜色主题</span>
+            </div>
+        </div>
+
+        <!-- Color Theme Indicator -->
+        <div id="theme-indicator" class="hidden">
+            <span id="theme-name"></span>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
